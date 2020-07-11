@@ -1,0 +1,90 @@
+.soon-banner {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img-decor/5-gif.gif);
+  background-position: center right;
+  background-size: 100%;
+
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 2, 2, 0.1);
+    // overlay help
+    // https://bryanlrobinson.com/blog/how-to-css-after-elements-for-background-overlays/
+  }
+  //
+  //
+  .home-banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+
+    h1 {
+      font-size: 5rem;
+      margin: 0px 0 50px 0;
+      font-family: "Poppins-light";
+      line-height: 32px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.616);
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+    }
+  }
+  //   --------
+  .footer-home {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    p {
+      color: rgba(14, 14, 14, 0.8);
+      font-family: "Arimo";
+      font-size: 0.9em;
+    }
+
+    .insta {
+      display: flex;
+
+      .dot {
+        margin: 0 10px 0 0;
+        width: 15px;
+        height: 15px;
+        background-color: rgba(14, 14, 14, 0.8);
+        border-radius: 100%;
+      }
+
+      p {
+        color: rgba(14, 14, 14, 0.8);
+        display: inline-block;
+        font-family: "Arimo";
+        font-size: 0.9em;
+      }
+    }
+
+    //
+    li {
+      text-transform: lowercase;
+      font-size: 0.9em;
+      color: rgba(14, 14, 14, 0.8);
+      font-family: "Arimo";
+    }
+  }
+}

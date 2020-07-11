@@ -1,0 +1,76 @@
+.MenuTwo {
+  width: 100vw;
+  min-height: 3vh;
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 1;
+
+  .style-link-nav {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+  }
+
+  // ---------------input
+  .text {
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .form-searchfield {
+      background-color: transparent;
+      input {
+        background-color: transparent;
+        color: rgba(14, 14, 14, 0.8);
+        border: 0;
+      }
+      .input-text {
+        background-color: transparent;
+        padding: 4px 20px;
+        border: 1px solid rgba(14, 14, 14, 0.8);
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+
+        outline: none;
+        &::placeholder {
+          color: rgba(14, 14, 14, 0.8);
+        }
+      }
+      .submit {
+        background-color: transparent;
+      }
+    }
+  }
+  //   input search
+  .input-search {
+    margin: 0 10px;
+    color: rgba(163, 163, 163, 0.3);
+  }
+  //   --------------
+
+  h3 {
+    color: rgba(14, 14, 14, 0.8);
+    letter-spacing: 10px;
+  }
+  nav {
+    li {
+      color: rgba(14, 14, 14, 0.8);
+      display: inline;
+      list-style: none;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    ion-icon {
+      margin: 0 3px 0 0;
+      vertical-align: bottom;
+      font-size: 20px;
+    }
+  }
+  //
+}

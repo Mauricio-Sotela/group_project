@@ -1,0 +1,166 @@
+.product-info-banner {
+  width: 100vw;
+  height: 90vh;
+  background-color: rgba(224, 175, 129, 0.5);
+
+  display: flex;
+  background-attachment: fixed;
+  flex-direction: column;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img-decor/yellownosestudio.jpg);
+}
+
+//
+h1 {
+  text-align: center;
+  padding: 100px 0 0px 0;
+  margin-top: 30px;
+  font-size: 3.8em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  text-align: center;
+  padding: 0px 0 50px 0;
+  margin-top: 0px;
+  font-size: 1.4em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.product-info {
+  width: 100vw;
+  height: 90vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+  .box-quote {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    width: 80vw;
+    height: 70vh;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+    .productInfo-boxImg {
+      width: 48.5%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .productInfo-boxDescription {
+      width: 48.5%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 0 0 20px;
+      background-color: rgb(255, 255, 255);
+      h3 {
+        font-size: 1.4em;
+        font-family: "Fjord One", serif;
+        font-weight: 600;
+        margin: 5px;
+      }
+
+      h4 {
+        margin: 6px;
+      }
+      h5 {
+        font-size: 1.5em;
+        margin: 5px;
+        color: rgb(136, 136, 136);
+        font-family: monospace;
+      }
+      h6 {
+        font-size: 1.3em;
+        margin: 5px;
+        color: rgb(136, 136, 136);
+        font-family: monospace;
+      }
+
+      a {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #000;
+        font-size: 0.8em;
+        margin: 4px;
+      }
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+        font-size: 0.9em;
+        margin: 4px;
+      }
+      span {
+        margin: 10px 0;
+        font-family: "Poppins-light";
+        color: #646464;
+        font-weight: 100;
+        border-bottom: 1px solid #8a8a8a;
+        padding-bottom: 1px;
+      }
+    }
+  }
+}
+
+//   --------
+.footer-product-info {
+  width: 100%;
+  height: 20%;
+  margin: 150px 0 100px 0;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+
+  p {
+    font-size: 20px;
+    color: rgba(14, 14, 14, 0.8);
+    font-family: "Arimo";
+    font-size: 0.9em;
+  }
+
+  .insta {
+    display: flex;
+
+    .dot {
+      margin: 0 10px 0 0;
+      width: 15px;
+      height: 15px;
+      background-color: rgba(14, 14, 14, 0.8);
+      border-radius: 100%;
+    }
+
+    p {
+      font-size: 20px;
+      color: rgba(14, 14, 14, 0.8);
+      display: inline-block;
+      font-family: "Arimo";
+      font-size: 0.9em;
+    }
+  }
+
+  //
+  li {
+    text-transform: lowercase;
+    font-size: 0.9em;
+    color: rgba(14, 14, 14, 0.8);
+    font-family: "Arimo";
+  }
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "id": 0,
+    "productName": "ARC TABLE",
+    "url": "https://www.fotoagent.dk/single_picture/12134/138/custom1/Arc_coffee_table_ash.jpg",
+    "price": 679.52,
+    "inventory": 3,
+    "tags": "Woud Design Beistelltisch Arc",
+    "label": "WOUD",
+    "delivery": "Dispatched in 18 20 weeks",
+    "link": "https://www.woud.dk/arc-coffee-table-white-pigmented-ash/",
+    "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 1,
+    "productName": "VASE CACTUS",
+    "url": "images/leonel_lopez.jpg",
+
+    "price": 100.2,
+    "inventory": 21,
+    "tags": "vase POTTRY leonel lopez",
+    "label": "vase",
+    "link": "http://byricardomarcenaroi.blogspot.com/2011/04/ceramic-ceramica-mata-ortiz-pottery.html",
+    "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 2,
+    "productName": "WANDSEKRETÄR",
+    "url": "images/WANDSEKRETÄR.jpg",
+    "price": 1.999,
+    "inventory": 0,
+    "tags": "Multifunctional Pill Schrank",
+    "label": "wandsekretär",
+    "link": "https://www.pamono.de/multifunctional-pill-schrank-in-schwarz-gelb-von-dalius-razauskas-fuer-emko/?utm_medium=cpc&utm_source=google&utm_campaign=PLA_DE_1519633602_56981826143&utm_content=288977479421_c_&utm_term=pla-294682000766___QYI-287317&gclid=EAIaIQobChMIwfGtp5Ki6gIViKoYCh3RewDXEAQYAiABEgKhHfD_BwE",
+    "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 3,
+    "productName": "Alessa Daybed ",
+    "url": "images/AlessaDaybed.jpg",
+    "price": 879.52,
+    "inventory": 1,
+    "tags": "Daybed Cushion  Pillow Set",
+    "label": "Alessa",
+    "link": "https://www.moeshomecollection.com/product/rn-1036-23/",
+    "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 4,
+    "productName": "FORDITE ",
+    "url": "images/fordite.jpg",
+    "price": 7959.5,
+    "inventory": 21,
+    "tags": "rug smeg carpet design",
+    "label": "fordite",
+    "link": "https://www.archiproducts.com/en/products/cc-tapis/handmade-custom-rug-fordite_388112",
+    "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 5,
+    "productName": "SMEG FAB10",
+    "url": "images/smeg-fridge.jpg",
+    "price": 899.0,
+    "inventory": 21,
+    "tags": "fridge vintage home design",
+    "label": "smeg",
+    "link": "https://www.ambientedirect.com/smeg/fab10-kuehlschrank-mit-gefrierfach_pid_2728.html?adgt_source=gmc&adgt_medium=product&adgt_campaign=de&adgt_content=020012&src=gmc&lan=de&shop_country=de&art=020012000003&gclid=EAIaIQobChMIjJf57JWi6gIViZntCh29GAWjEAQYFiABEgLnw_D_BwE&et_uk=9f03651e646b44518d30720119e7eacb&aff=gmc&nodds=1",
+    "descriptionLong": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  }
+]

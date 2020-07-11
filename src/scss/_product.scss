@@ -1,0 +1,171 @@
+.product-banner {
+  width: 100vw;
+  height: 80vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img-decor/plantscape_design-00-720x480.jpg);
+  .box1-banner {
+    background-color: transparent;
+    width: 50%;
+    height: 100%;
+  }
+  .box2-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 60%;
+    h1 {
+      color: rgba(14, 14, 14, 0.8);
+
+      letter-spacing: -2px;
+      text-align: right;
+      font-size: 3.6rem;
+      padding: 0px 150px 0px 30px;
+      margin: 0px 0 30px 0;
+      font-family: "Poppins-light";
+      line-height: 36px;
+
+      letter-spacing: 1px;
+    }
+    p {
+      color: rgba(14, 14, 14, 0.8);
+
+      letter-spacing: -2px;
+      text-align: right;
+      font-size: 1.3rem;
+      padding: 0px 150px 0px 30px;
+      margin: 0px 0 30px 0;
+      font-family: "Poppins-light";
+      line-height: 28px;
+
+      letter-spacing: 1px;
+    }
+    h2 {
+      color: rgba(14, 14, 14, 0.8);
+
+      letter-spacing: -2px;
+      text-align: right;
+      font-size: 3.6rem;
+      padding: 5px 150px 0px 30px;
+      margin: 0px 0 50px 0;
+      font-family: "Poppins-light";
+      line-height: 36px;
+
+      letter-spacing: 1px;
+    }
+    button {
+      z-index: 4;
+      background-color: transparent;
+      border: 1px solid rgba(14, 14, 14, 0.8);
+      padding: 12px 23px;
+      margin: 0 150px 0 35px;
+      color: #000;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        background-color: #000;
+        border: 0px solid #000;
+        color: #fff;
+        padding: 12px 23px;
+      }
+    }
+  }
+}
+//
+h1 {
+  text-align: center;
+  padding: 100px 0 0px 0;
+  margin-top: 30px;
+  font-size: 3.8em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  text-align: center;
+  padding: 0px 0 0px 0;
+  margin-top: 0px;
+  font-size: 1.4em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container-products {
+  padding: 0.5em 20em 10em 20em;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  // background-color: lemonchiffon; //pretty yellow
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #000;
+
+  li {
+    list-style: none;
+  }
+
+  .quote {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: rgb(255, 255, 255);
+
+    h1 {
+      font-size: 1.1rem;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      color: #111111;
+      margin: 10px 5px;
+    }
+    .links-deco-products {
+      text-decoration: none;
+      color: rgb(255, 208, 0);
+    }
+
+    .img-box {
+      width: 100%;
+
+      img {
+        width: 100%;
+        min-height: auto;
+        object-fit: cover;
+      }
+    }
+    //
+    p {
+      text-transform: uppercase;
+      color: #535353;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2vh;
+      margin: 10px 0;
+    }
+    // button
+    .btn-addToCart {
+      margin: 28px 0px;
+      padding: 12px 20px;
+      font-size: 1.7vh;
+      border-top: 1px solid#535353;
+      border-bottom: 1px solid #535353;
+      border-left: 0px solid #000;
+      border-right: 0px solid #000;
+      background-color: white;
+      transition: 0.6s ease;
+      &:hover {
+        border-top: 1px solid#9c9c9c;
+        border-bottom: 1px solid#9c9c9c;
+        border-top: 0px solid#535353;
+        border-bottom: 0px solid #535353;
+        background-color: #111;
+        color: #ddd;
+      }
+    }
+    h5 {
+      color: #222;
+    }
+  }
+}
