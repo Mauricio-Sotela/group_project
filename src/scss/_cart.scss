@@ -4,12 +4,12 @@ Cart
 ===============
 */
 .cart {
-  min-height: calc(100vh - 80px);
-  width: 90vw;
-  margin:  auto;
+  min-height: 40rem;
+  width: 50vw;
+  margin: 0 auto;
   padding: 2.5rem 0;
   max-width: var(--fixed-width);
- 
+ margin-top: 4rem;
 }
 .cart h2 {
   text-transform: uppercase;
@@ -55,7 +55,7 @@ Cart Item
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 1.5rem;
   margin: 1.5rem 0;
-  margin-top: 15rem;
+  margin-top: 1rem;
 }
 .cart-item img {
   width: 5rem;

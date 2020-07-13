@@ -17,15 +17,18 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
   //     </section>
   //   );
   // }
+  
+  
   return (
+    
     <section className="cart">
       {/* cart header */}
-      <header>
-        <h2>your bag</h2>
-      </header>
+
+      <h2>your bag</h2>
+
       {/* cart items */}
       <article>
-        {cart.map(item => {
+        {cart.map((item) => {
           return <Cart key={item.id} {...item} />;
         })}
       </article>
@@ -49,7 +52,8 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
 };
 
 function mapStateToProps(store) {
-const { cart, total } = store;
+  const { cart, total } = store;
+  console.log(cart)
   return { cart, total };
 }
 export default connect(mapStateToProps)(CartContainer);

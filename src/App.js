@@ -34,7 +34,7 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}>
         <MenuTwo />
 
-        <CartContainer />
+        {/* <CartContainer /> */}
         <Switch>
           {/* 
                 normal:  <Route path="/" exact component={Home} />
@@ -46,7 +46,7 @@ function App() {
           <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
           {/* -------------- */}
 
-          <Route path="/cart" exact component={Cart} />
+          <Route path="/cart" exact component={CartContainer} />
           <Route
             path="/product/:id"
             component={({ match }) => <ProductInfo id={match.params.id} />}
