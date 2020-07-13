@@ -101,3 +101,8 @@ Cart Item
   font-size: 1.25rem;
   line-height: 1;
 }
+.articles{
+  max-height: 50vh;
+  overflow-y: scroll;
+  padding: 1rem;
+}
