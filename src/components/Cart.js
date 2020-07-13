@@ -16,7 +16,7 @@ const Cart = (
       <img src={state.url} alt={state.productName} />
       <div>
         <h4>{state.productName}</h4>
-        <h4 className="item-price">${state.price}</h4>
+        <h4 className="item-price">€{state.price}</h4>
         {/* remove button */}
         <button className="remove-btn" onClick={() => state.remove()}>
           remove

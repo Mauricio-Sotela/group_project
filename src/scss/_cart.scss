@@ -3,13 +3,31 @@
 Cart
 ===============
 */
+:root{
+  --clr-primary: rgb(38, 128, 192);
+  --clr-primary-dark: rgb(0, 62, 107);
+  --clr-primary-light: rgb(133, 198, 244);
+  --clr-grey-1: rgb(16, 42, 66);
+  --clr-grey-5: rgb(97, 125, 152);
+  --clr-grey-10: rgb(241, 245, 248);
+  --clr-white: rgb(255, 255, 255);
+  --clr-red-dark: rgb(187, 37, 37);
+  --clr-red-light: rgb(230, 107, 107);
+  --ff-primary: "Catamaran", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --large-screen-width: 1170px;
+  --small-screen-width: 90vw;
+  --fixed-width: 50rem;
+}
 .cart {
   min-height: 40rem;
   width: 50vw;
   margin: 0 auto;
   padding: 2.5rem 0;
   max-width: var(--fixed-width);
- margin-top: 4rem;
+margin-top: 4rem;
 }
 .cart h2 {
   text-transform: uppercase;
@@ -100,9 +118,10 @@ Cart Item
   margin-bottom: 0;
   font-size: 1.25rem;
   line-height: 1;
+  padding:1rem 0;
 }
 .articles{
-  max-height: 50vh;
+  max-height: 46vh;
   overflow-y: scroll;
   padding: 1rem;
 }

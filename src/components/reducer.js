@@ -21,7 +21,7 @@ function reducer(state = initialStore, action) {
   if (action.type === CLEAR_CART) {
     return {
       ...state,
-      cart: state.cart.filter((dataItem) => dataItem.id == action.payload.id),
+      cart: [],
     };
   }
   if (action.type === DECREASE) {   
@@ -50,13 +50,15 @@ function reducer(state = initialStore, action) {
     };
   }
   if (action.type === GET_TOTALS) {
-    let { total, amount } = state.cart.reduce(
+    console.log(state);
+    
+    let { total, inventory } = state.cart.reduce(
       (cartTotal, dataItem) => {
-        const { price, amount } = dataItem;
-        const itemTotal = price * amount;
+        const { price, inventory } = dataItem;
+        const itemTotal = price * inventory;
 
         cartTotal.total += itemTotal;
-        cartTotal.amount += amount;
+        cartTotal.inventory += inventory;
 
         return cartTotal;
       },
@@ -66,7 +68,7 @@ function reducer(state = initialStore, action) {
       }
     );
     total = parseFloat(total.toFixed(2));
-    return { ...state, total, amount };
+    return { ...state, total, inventory };
   }
   if (action.type === TOGGLE_AMOUNT) {
     return {
