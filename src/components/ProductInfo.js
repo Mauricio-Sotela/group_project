@@ -23,7 +23,7 @@ const ProductInfo = (state) => {
     //
     //
     //
-    console.log(item);
+  
 
     return (
       <div key={id} className="box-quote">

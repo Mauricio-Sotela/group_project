@@ -9,7 +9,7 @@ Cart
   margin: 0 auto;
   padding: 2.5rem 0;
   max-width: var(--fixed-width);
- margin-top: 4rem;
+margin-top: 4rem;
 }
 .cart h2 {
   text-transform: uppercase;
@@ -100,9 +100,10 @@ Cart Item
   margin-bottom: 0;
   font-size: 1.25rem;
   line-height: 1;
+  padding:1rem 0;
 }
 .articles{
-  max-height: 50vh;
+  max-height: 46vh;
   overflow-y: scroll;
   padding: 1rem;
 }
