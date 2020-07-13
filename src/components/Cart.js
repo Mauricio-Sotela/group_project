@@ -10,10 +10,7 @@ import {
 const Cart = (
   state,
   {remove, increase, decrease, toggle }
-) => {
-  console.log(state);
- 
-  
+) => { 
   return (
     <div className="cart-item">
       <img src={state.url} alt={state.productName} />
@@ -56,7 +53,6 @@ const Cart = (
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   const { id, amount } = ownProps;
- console.log(dispatch);
   return {
     remove: () => dispatch(removeItem(id)),
     increase: () => dispatch({ type: INCREASE, payload: { id } }),
@@ -68,7 +64,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   
 };
 const mapStateToProps = (states) => {
-  console.log(states);
   const { cart } = states;
   return { states };
 };

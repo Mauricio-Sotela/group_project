@@ -24,9 +24,7 @@ function reducer(state = initialStore, action) {
       cart: state.cart.filter((dataItem) => dataItem.id == action.payload.id),
     };
   }
-  if (action.type === DECREASE) {
-    console.log('ggggggg');
-    
+  if (action.type === DECREASE) {   
     let tempCart = state.cart.map((dataItem) => {
       if (dataItem.id === action.payload.id) {
         dataItem = { ...dataItem, inventory: dataItem.inventory - 1 };
@@ -37,14 +35,10 @@ function reducer(state = initialStore, action) {
     return { ...state, cart: tempCart };
   }
   if (action.type === INCREASE) {
-    console.log("jjjjj");
-
     let tempCart = state.cart.map((dataItem) => {
       if (dataItem.id === action.payload.id) {
         dataItem = { ...dataItem, inventory: dataItem.inventory + 1 };
       }
-      console.log(dataItem);
-
       return dataItem;
     });
     return { ...state, cart: tempCart };
