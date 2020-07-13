@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 const MenuTwo = (state) => {
   return (
     <header className="MenuTwo">
-      <Link className="style-link-nav" to="/Home">
+      <Link className="style-link-nav" to="/">
         <h3>FLUXUS</h3>
       </Link>
 
@@ -30,7 +30,7 @@ const MenuTwo = (state) => {
 
         <Link className="style-link-nav" to="/cart">
           <li>
-  <ion-icon name="basket-outline"></ion-icon> Cart <strong>{state.inventory}</strong>
+  <ion-icon name="basket-outline"></ion-icon> Cart <strong>{state.state.selectedItem.length}</strong>
           </li>
         </Link>
       </nav>
@@ -39,8 +39,6 @@ const MenuTwo = (state) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
-  
-  return { inventory: state.inventory };
+  return {state};
 };
 export default connect(mapStateToProps)(MenuTwo);

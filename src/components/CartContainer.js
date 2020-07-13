@@ -2,35 +2,33 @@ import React from "react";
 import Cart from "./Cart";
 import { connect } from "react-redux";
 import { CLEAR_CART, GET_TOTALS } from "../components/actions";
-const CartContainer = ({ cart = [], total, dispatch }) => {
+const CartContainer = ({ cart = [], total, selectedItem = [], dispatch }) => {
   React.useEffect(() => {
     dispatch({ type: GET_TOTALS });
-  }, [cart, dispatch]);
-  if (cart.length === 0) {
+  }, [selectedItem, dispatch]);
+  if (selectedItem.length === 0) {
     return (
       <section className="cart">
-         <div className="empty-cart">
-            <img
-              src="https://res.cloudinary.com/sivadass/image/upload/v1495427934/icons/empty-cart.png"
-              alt="empty-cart"
-            />
-            <h2>You cart is empty!</h2>
-          </div>
+        <div className="empty-cart">
+          <img
+            src="https://res.cloudinary.com/sivadass/image/upload/v1495427934/icons/empty-cart.png"
+            alt="empty-cart"
+          />
+          <h2>You cart is empty!</h2>
+        </div>
       </section>
     );
   }
-  
-  
+
   return (
-    
     <section className="cart">
       {/* cart header */}
 
       <h2>your bag</h2>
 
       {/* cart items */}
-      <div className='articles'>
-        {cart.map((item) => {
+      <div className="articles">
+        {selectedItem.map((item) => {
           return <Cart key={item.id} {...item} />;
         })}
       </div>
@@ -54,8 +52,7 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
 };
 
 function mapStateToProps(store) {
-  const { cart, total } = store;
-  console.log(cart)
-  return { cart, total };
+  const { cart, total, selectedItem } = store;
+  return { cart, total, selectedItem };
 }
 export default connect(mapStateToProps)(CartContainer);

@@ -13,46 +13,50 @@ const initialStore = {
   cart: Data,
   total: 0,
   amount: 0,
+  selectedItem:[]
 };
 function reducer(state = initialStore, action) {
   if (action.type === ADD) {
-    return;
+    return {
+      ...state,
+      selectedItem: state.cart.filter((dataItem) => {
+        return dataItem.id !== action.payload.id;
+      }),
+    };
   }
   if (action.type === CLEAR_CART) {
     return {
       ...state,
-      cart: [],
+      selectedItem: [],
     };
   }
-  if (action.type === DECREASE) {   
-    let tempCart = state.cart.map((dataItem) => {
+  if (action.type === DECREASE) {
+    let tempCart = state.selectedItem.map((dataItem) => {
       if (dataItem.id === action.payload.id) {
         dataItem = { ...dataItem, inventory: dataItem.inventory - 1 };
       }
       return dataItem;
     });
 
-    return { ...state, cart: tempCart };
+    return { ...state, selectedItem: tempCart };
   }
   if (action.type === INCREASE) {
-    let tempCart = state.cart.map((dataItem) => {
+    let tempCart = state.selectedItem.map((dataItem) => {
       if (dataItem.id === action.payload.id) {
         dataItem = { ...dataItem, inventory: dataItem.inventory + 1 };
       }
       return dataItem;
     });
-    return { ...state, cart: tempCart };
+    return { ...state, selectedItem: tempCart };
   }
   if (action.type === REMOVE) {
     return {
       ...state,
-      cart: state.cart.filter((dataItem) => dataItem.id !== action.payload.id),
+      selectedItem: state.selectedItem.filter((dataItem) => dataItem.id !== action.payload.id),
     };
   }
   if (action.type === GET_TOTALS) {
-    console.log(state);
-    
-    let { total, inventory } = state.cart.reduce(
+    let { total, inventory } = state.selectedItem.reduce(
       (cartTotal, dataItem) => {
         const { price, inventory } = dataItem;
         const itemTotal = price * inventory;
@@ -70,22 +74,28 @@ function reducer(state = initialStore, action) {
     total = parseFloat(total.toFixed(2));
     return { ...state, total, inventory };
   }
-  if (action.type === TOGGLE_AMOUNT) {
-    return {
-      ...state,
-      cart: state.cart.map((dataItem) => {
-        if (dataItem.id === action.payload.id) {
-          if (action.payload.toggle === "inc") {
-            return (dataItem = { ...dataItem, inventory: dataItem.inventory + 1 });
-          }
-          if (action.payload.toggle === "dec") {
-            return (dataItem = { ...dataItem, inventory: dataItem.inventory - 1 });
-          }
-        }
-        return dataItem;
-      }),
-    };
-  }
+  // if (action.type === TOGGLE_AMOUNT) {
+  //   return {
+  //     ...state,
+  //     selectedItem: state.selectedItem.map((dataItem) => {
+  //       if (dataItem.id === action.payload.id) {
+  //         if (action.payload.toggle === "inc") {
+  //           return (dataItem = {
+  //             ...dataItem,
+  //             inventory: dataItem.inventory + 1,
+  //           });
+  //         }
+  //         if (action.payload.toggle === "dec") {
+  //           return (dataItem = {
+  //             ...dataItem,
+  //             inventory: dataItem.inventory - 1,
+  //           });
+  //         }
+  //       }
+  //       return dataItem;
+  //     }),
+  //   };
+  // }
   return state;
 }
 

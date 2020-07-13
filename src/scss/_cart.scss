@@ -107,10 +107,10 @@ Cart Item
   border: none;
   cursor: pointer;
 }
-.amount-btn svg {
+.amount-btn i {
   fill: var(--clr-primary);
 }
-.amount-btn:hover svg {
+.amount-btn:hover i {
   fill: var(--clr-primary-light);
 }
 .amount {
@@ -121,7 +121,8 @@ Cart Item
   padding:1rem 0;
 }
 .articles{
-  max-height: 46vh;
+  max-height: 52vh;
   overflow-y: scroll;
   padding: 1rem;
+  
 }
