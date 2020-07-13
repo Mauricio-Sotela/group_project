@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // {BrowserRouter} i can change it to just Router by typing "as" like so:
 // { BrowserRouter as Router, Switch, Route }
 
-//
+//COMPONENTS
 import Data from "./data.json";
 import MenuTwo from "./components/MenuTwo";
 import Home from "./components/Home";
@@ -12,30 +12,44 @@ import Product from "./components/Product";
 import ProductInfo from "./components/ProductInfo";
 import Cart from "./components/Cart";
 import Soon from "./components/Soon";
+import CartContainer from "./components/CartContainer";
 
-class App extends Component {
-  render() {
-    return (
+// redux stuff
+import { createStore } from "redux";
+import reducer from "./components/reducer";
+// react-redux - Provider - wraps app , connect - used in components
+import { Provider } from "react-redux";
+
+// initial store
+
+// store
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+function App() {
+  return (
+    <Provider store={store}>
       <Router basename={process.env.PUBLIC_URL}>
         <MenuTwo />
 
+        {/* <CartContainer /> */}
         <Switch>
           {/* 
-              normal:  <Route path="/" exact component={Home} />
-              Use this way if there s a problem with the DEPLOYment:
-              <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} /> 
-             - PUBLIC_URL will grab the root URL from that server, and 
-
-          */}
+                normal:  <Route path="/" exact component={Home} />
+                Use this way if there s a problem with the DEPLOYment:
+                <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} /> 
+               - PUBLIC_URL will grab the root URL from that server, and 
+  
+            */}
           <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
           {/* -------------- */}
 
-          <Route path="/cart" exact component={Cart} />
+          <Route path="/cart" exact component={CartContainer} />
           <Route
             path="/product/:id"
-            component={({ match }) => (
-              <ProductInfo data={Data} id={match.params.id} />
-            )}
+            component={({ match }) => <ProductInfo id={match.params.id} />}
           />
           <Route
             path="/product"
@@ -47,12 +61,12 @@ class App extends Component {
             component={Soon}
           />
           {/* 
-           <Route path="/*" component={Soon} />
-          */}
+             <Route path="/*" component={Soon} />
+            */}
         </Switch>
       </Router>
-    );
-  }
+    </Provider>
+  );
 }
 
 export default App;

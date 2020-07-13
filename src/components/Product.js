@@ -1,10 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { connect } from "react-redux";
 const Product = (props) => {
   const items = props.data.map((item) => {
     const { id, productName, delivery, url, price, tags } = item;
 
+  const  add = (state) => {
+    console.log('ggg');
+    
+      return {
+        ...state,
+        cart: [...items],items
+      };
+    };
     return (
       <Link key={id} to={`/product/${id}`}>
         {/*  */}
@@ -21,7 +29,7 @@ const Product = (props) => {
           <h5>&euro; {price}</h5>
 
           {/* ---- Btn ----- */}
-          <button className="btn-addToCart">Add to Cart</button>
+          <button className="btn-addToCart" onClick={add}>Add to Cart</button>
         </li>
       </Link>
 
@@ -81,4 +89,9 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+const mapStateToProps = (state) => {
+  console.log(state);
+
+  return { state };
+};
+export default connect(mapStateToProps)(Product);
