@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { ADD } from "../components/actions";
 const Product = (props) => {
   const items = props.data.map((item) => {
     const { id, productName, delivery, url, price, tags } = item;

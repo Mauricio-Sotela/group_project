@@ -21,7 +21,7 @@ function reducer(state = initialStore, action) {
   if (action.type === CLEAR_CART) {
     return {
       ...state,
-      cart: state.cart.filter((dataItem) => dataItem.id == action.payload.id),
+      cart: [],
     };
   }
   if (action.type === DECREASE) {   
