@@ -1,8 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const ProductInfo = (props) => {
-  console.log(props);
-  const selectedItem = props.data.filter((item) => item.id == props.id);
+const ProductInfo = (state) => {
+  console.log(state);
+  const selectedItem = state.state.cart.filter((item) => item.id == state.id);
   const moreInfo = selectedItem.map((item) => {
     //
     //
@@ -22,6 +23,8 @@ const ProductInfo = (props) => {
     //
     //
     //
+    console.log(item);
+    
     return (
       <div key={id} className="box-quote">
         {/* box 1 */}
@@ -82,4 +85,7 @@ const ProductInfo = (props) => {
   );
 };
 
-export default ProductInfo;
+const mapStateToProps = state => {
+  return {state };
+};
+export default connect(mapStateToProps)(ProductInfo);

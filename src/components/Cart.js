@@ -1,13 +1,71 @@
 import React from "react";
-
-const Cart = () => {
+import { connect } from "react-redux";
+import {
+  INCREASE,
+  DECREASE,
+  REMOVE,
+  TOGGLE_AMOUNT,
+  removeItem,
+} from "./actions.js";
+const Cart = (
+  state,
+  {remove, increase, decrease, toggle }
+) => { 
   return (
-    <React.Fragment>
-      <div className="cart">
-        <h3>Cart Me</h3>
+    <div className="cart-item">
+      <img src={state.url} alt={state.productName} />
+      <div>
+        <h4>{state.productName}</h4>
+        <h4 className="item-price">${state.price}</h4>
+        {/* remove button */}
+        <button className="remove-btn" onClick={() => state.remove()}>
+          remove
+        </button>
       </div>
-    </React.Fragment>
+      <div>
+        {/* increase amount */}
+        <button className="amount-btn" onClick={() => state.increase()}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z" />
+          </svg>
+        </button>
+        {/* amount */}
+        <p className="amount">{state.inventory}</p>
+        {/* decrease amount */}
+        <button
+          className="amount-btn"
+          onClick={() => {
+            if (state.inventory === 1) {
+              return state.remove();
+            } else {
+              return state.decrease();
+            }
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default Cart;
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const { id, amount } = ownProps;
+  return {
+    remove: () => dispatch(removeItem(id)),
+    increase: () => dispatch({ type: INCREASE, payload: { id } }),
+    decrease: () => dispatch({ type: DECREASE, payload: { id, amount } }),
+    toggle: (toggle) =>
+      dispatch({ type: TOGGLE_AMOUNT, payload: { id, toggle } }),
+  };
+ 
+  
+};
+const mapStateToProps = (states) => {
+  const { cart } = states;
+  return { states };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
