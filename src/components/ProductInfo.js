@@ -11,7 +11,7 @@ const ProductInfo = (state) => {
     const {
       id,
       productName,
-      url,
+      url2,
       price,
       inventory,
       tags,
@@ -24,13 +24,13 @@ const ProductInfo = (state) => {
     //
     //
     console.log(item);
-    
+
     return (
       <div key={id} className="box-quote">
         {/* box 1 */}
 
         <div className="productInfo-boxImg">
-          <img className="img-box" src={url} alt={label} />
+          <img className="img-box" src={url2} alt={label} />
         </div>
         {/* box 2 */}
         <div className="productInfo-boxDescription">
@@ -85,7 +85,7 @@ const ProductInfo = (state) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {state };
+const mapStateToProps = (state) => {
+  return { state };
 };
 export default connect(mapStateToProps)(ProductInfo);

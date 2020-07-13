@@ -3,6 +3,7 @@
     "id": 0,
     "productName": "ARC TABLE",
     "url": "https://www.fotoagent.dk/single_picture/12134/138/custom1/Arc_coffee_table_ash.jpg",
+    "url2": "https://www.fotoagent.dk/single_picture/12134/138/custom1/Arc_coffee_table_ash.jpg",
     "price": 679.52,
     "inventory": 3,
     "tags": "Woud Design Beistelltisch Arc",
@@ -14,8 +15,8 @@
   {
     "id": 1,
     "productName": "VASE CACTUS",
-    "url": "images/leonel_lopez.jpg",
-
+    "url": "./images/leonel_lopez.jpg",
+    "url2": "../images/leonel_lopez.jpg",
     "price": 100.2,
     "inventory": 21,
     "tags": "vase POTTRY leonel lopez",
@@ -26,7 +27,8 @@
   {
     "id": 2,
     "productName": "WANDSEKRETÄR",
-    "url": "images/WANDSEKRETÄR.jpg",
+    "url": "./images/WANDSEKRETÄR.jpg",
+    "url2": "../images/WANDSEKRETÄR.jpg",
     "price": 1.999,
     "inventory": 0,
     "tags": "Multifunctional Pill Schrank",
@@ -37,7 +39,8 @@
   {
     "id": 3,
     "productName": "Alessa Daybed ",
-    "url": "images/AlessaDaybed.jpg",
+    "url": "./images/AlessaDaybed.jpg",
+    "url2": "../images/AlessaDaybed.jpg",
     "price": 879.52,
     "inventory": 1,
     "tags": "Daybed Cushion  Pillow Set",
@@ -48,7 +51,8 @@
   {
     "id": 4,
     "productName": "FORDITE ",
-    "url": "images/fordite.jpg",
+    "url": "./images/fordite.jpg",
+    "url2": "../images/fordite.jpg",
     "price": 7959.5,
     "inventory": 21,
     "tags": "rug smeg carpet design",
@@ -59,7 +63,8 @@
   {
     "id": 5,
     "productName": "SMEG FAB10",
-    "url": "images/smeg-fridge.jpg",
+    "url": "./images/smeg-fridge.jpg",
+    "url2": "../images/smeg-fridge.jpg",
     "price": 899.0,
     "inventory": 21,
     "tags": "fridge vintage home design",
