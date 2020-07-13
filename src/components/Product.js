@@ -6,12 +6,13 @@ const Product = (props) => {
   const items = props.data.map((item) => {
     const { id, productName, delivery, url, price, tags } = item;
 
-  const  add = (state) => {
-    console.log('ggg');
-    
+    const add = (state) => {
+      console.log("ggg");
+
       return {
         ...state,
-        cart: [...items],items
+        cart: [...items],
+        items,
       };
     };
     return (
@@ -30,7 +31,9 @@ const Product = (props) => {
           <h5>&euro; {price}</h5>
 
           {/* ---- Btn ----- */}
-          <button className="btn-addToCart" onClick={add}>Add to Cart</button>
+          <button className="btn-addToCart" onClick={add}>
+            More Info
+          </button>
         </li>
       </Link>
 
