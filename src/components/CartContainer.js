@@ -6,17 +6,19 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
   React.useEffect(() => {
     dispatch({ type: GET_TOTALS });
   }, [cart, dispatch]);
-  // if (cart.length === 0) {
-  //   return (
-  //     <section className="cart">
-  //       {/* cart header */}
-  //       <header>
-  //         <h2>your bag</h2>
-  //         <h4 className="empty-cart">is currently empty</h4>
-  //       </header>
-  //     </section>
-  //   );
-  // }
+  if (cart.length === 0) {
+    return (
+      <section className="cart">
+         <div className="empty-cart">
+            <img
+              src="https://res.cloudinary.com/sivadass/image/upload/v1495427934/icons/empty-cart.png"
+              alt="empty-cart"
+            />
+            <h2>You cart is empty!</h2>
+          </div>
+      </section>
+    );
+  }
   
   
   return (
@@ -27,11 +29,11 @@ const CartContainer = ({ cart = [], total, dispatch }) => {
       <h2>your bag</h2>
 
       {/* cart items */}
-      <article>
+      <div className='articles'>
         {cart.map((item) => {
           return <Cart key={item.id} {...item} />;
         })}
-      </article>
+      </div>
       {/* cart footer */}
       <footer>
         <hr />
