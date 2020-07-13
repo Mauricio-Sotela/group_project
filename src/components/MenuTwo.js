@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 // import CartContainer from './CartContainer'
 
-const MenuTwo = () => {
+const MenuTwo = (state) => {
   return (
     <header className="MenuTwo">
       <Link className="style-link-nav" to="/Home">
@@ -29,7 +30,7 @@ const MenuTwo = () => {
 
         <Link className="style-link-nav" to="/cart">
           <li>
-            <ion-icon name="basket-outline"></ion-icon> Cart
+  <ion-icon name="basket-outline"></ion-icon> Cart <strong>{state.inventory}</strong>
           </li>
         </Link>
       </nav>
@@ -37,4 +38,9 @@ const MenuTwo = () => {
   );
 };
 
-export default MenuTwo;
+const mapStateToProps = state => {
+  console.log(state);
+  
+  return { inventory: state.inventory };
+};
+export default connect(mapStateToProps)(MenuTwo);
