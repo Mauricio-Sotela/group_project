@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addItem } from "./actions";
-const ProductInfo = (state) => {
-  console.log(state);
-  const selectedItem = state.state.cart.filter((item) => item.id == state.id);
-  const moreInfo = selectedItem.map((item) => {
+const ProductInfo = ({addItem,store}) => {
+  console.log(store);
+  // const selectedItem = store.cart.map((item) => item.id == store.id);
+  const moreInfo = store.cart.map((item) => {
     //
     //
     //
@@ -42,7 +42,8 @@ const ProductInfo = (state) => {
           <span>{delivery}</span>
           <a href={link}
           >More info</a>
-<button onClick={(state)=> state.addItem(state.id)}>add</button>
+<button onClick={()=>{addItem(store.id);console.log(store.id);
+} }>add</button>
         </div>
       </div>
       //
@@ -89,7 +90,7 @@ const ProductInfo = (state) => {
 const mapActionsToProps = {
   addItem,
 };
-const mapStateToProps = (state) => {
-  return { state };
+const mapStateToProps = (store) => {
+  return { store };
 };
 export default connect(mapStateToProps, mapActionsToProps)(ProductInfo);
