@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addItem } from "./actions";
-const ProductInfo = ({addItem,store}) => {
+const ProductInfo = ({ addItem, store }) => {
   console.log(store);
-  // const selectedItem = store.cart.map((item) => item.id == store.id);
+   const selectedItem = store.cart.map((item) => item.id == store.id);
   const moreInfo = store.cart.map((item) => {
     //
     //
@@ -23,7 +23,7 @@ const ProductInfo = ({addItem,store}) => {
     //
     //
     //
-  
+console.log(item);
 
     return (
       <div key={id} className="box-quote">
@@ -40,10 +40,12 @@ const ProductInfo = ({addItem,store}) => {
           <h6>{label}</h6>
           <p>{descriptionLong}</p>
           <span>{delivery}</span>
-          <a href={link}
-          >More info</a>
-<button onClick={()=>{addItem(store.id);console.log(store.id);
-} }>add</button>
+          <a href={link}>More info</a>
+          <button
+            onClick={()=>{addItem(item)}}
+          >
+            add
+          </button>
         </div>
       </div>
       //

@@ -13,17 +13,19 @@ const initialStore = {
   cart: Data,
   total: 0,
   amount: 0,
-  selectedItem:[]
+  selectedItem: [],
 };
 function reducer(state = initialStore, action) {
   if (action.type === ADD) {
-    console.log('kkkkkkk');
-    
+    console.log(action);
+   let item= state.cart.filter((item) => {
+      if (item.id === action.item.id) {
+        return item
+      }
+    })
     return {
       ...state,
-      selectedItem: state.cart.filter(item =>
-        item.id === action.id 
-      ),
+      selectedItem:[...state.selectedItem.concat(item)]
     };
   }
   if (action.type === CLEAR_CART) {
@@ -54,7 +56,9 @@ function reducer(state = initialStore, action) {
   if (action.type === REMOVE) {
     return {
       ...state,
-      selectedItem: state.selectedItem.filter((dataItem) => dataItem.id !== action.payload.id),
+      selectedItem: state.selectedItem.filter(
+        (dataItem) => dataItem.id !== action.payload.id
+      ),
     };
   }
   if (action.type === GET_TOTALS) {
@@ -81,4 +85,3 @@ function reducer(state = initialStore, action) {
 }
 
 export default reducer;
-
