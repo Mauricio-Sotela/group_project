@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import { addItem } from "./actions";
 const ProductInfo = (state) => {
   console.log(state);
   const selectedItem = state.state.cart.filter((item) => item.id == state.id);
@@ -40,7 +40,9 @@ const ProductInfo = (state) => {
           <h6>{label}</h6>
           <p>{descriptionLong}</p>
           <span>{delivery}</span>
-          <a href={link}>More info</a>
+          <a href={link}
+          >More info</a>
+<button onClick={state.add}>add</button>
         </div>
       </div>
       //
@@ -84,8 +86,13 @@ const ProductInfo = (state) => {
     </React.Fragment>
   );
 };
-
+const mapDispatchToProps = (dispatch) => {
+  
+  return {
+    addItem
+  };
+};
 const mapStateToProps = (state) => {
   return { state };
 };
-export default connect(mapStateToProps)(ProductInfo);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductInfo);
