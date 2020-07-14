@@ -17,10 +17,12 @@ const initialStore = {
 };
 function reducer(state = initialStore, action) {
   if (action.type === ADD) {
+    console.log('kkkkkkk');
+    
     return {
       ...state,
-      selectedItem: state.cart.map(item =>
-        item.id == action.id ? {...state, selectedItem:item} : item,
+      selectedItem: state.cart.filter(item =>
+        item.id === action.id 
       ),
     };
   }

@@ -25,7 +25,7 @@ const Product = (state) => {
             <h5>&euro; {price}</h5>
 
             {/* ---- Btn ----- */}
-          </li><button className="btn-addToCart" onClick={state.addItem(id)}>
+          </li><button className="btn-addToCart" onClick={(id)=> state.addItem(id)}>
           More Info
         </button>
         </Link>
@@ -87,13 +87,12 @@ const Product = (state) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  
-  return {
-   addItem
-  };
-};
+
 const mapStateToProps = (state) => {
   return { state };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Product);
+const mapActionsToProps = {
+  addItem,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(Product);

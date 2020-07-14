@@ -42,7 +42,7 @@ const ProductInfo = (state) => {
           <span>{delivery}</span>
           <a href={link}
           >More info</a>
-<button onClick={state.add}>add</button>
+<button onClick={(state)=> state.addItem(state.id)}>add</button>
         </div>
       </div>
       //
@@ -86,13 +86,10 @@ const ProductInfo = (state) => {
     </React.Fragment>
   );
 };
-const mapDispatchToProps = (dispatch) => {
-  
-  return {
-    addItem
-  };
+const mapActionsToProps = {
+  addItem,
 };
 const mapStateToProps = (state) => {
   return { state };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(ProductInfo);
+export default connect(mapStateToProps, mapActionsToProps)(ProductInfo);
