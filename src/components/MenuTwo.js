@@ -11,16 +11,10 @@ const MenuTwo = (state) => {
       </Link>
 
       <div className="text">
-        {/* --------  FORM related 2 -------- */}
         <form className="form-searchfield">
           <input className="input-text" type="text" />
-
-          {/* --- */}
-
           <input className="input-search" type="submit" value="search" />
         </form>
-
-        {/* --------  FORM -------- */}
       </div>
 
       <nav>
@@ -30,7 +24,8 @@ const MenuTwo = (state) => {
 
         <Link className="style-link-nav" to="/cart">
           <li>
-  <ion-icon name="basket-outline"></ion-icon> Cart <strong>{state.state.selectedItem.length}</strong>
+            <ion-icon name="basket-outline"></ion-icon> Cart{" "}
+            <strong>{state.state.selectedItem.length}</strong>
           </li>
         </Link>
       </nav>
@@ -38,7 +33,8 @@ const MenuTwo = (state) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {state};
+const mapStateToProps = (state) => {
+  return { state };
 };
+
 export default connect(mapStateToProps)(MenuTwo);
