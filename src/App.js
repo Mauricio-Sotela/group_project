@@ -17,7 +17,7 @@ import CartContainer from "./components/CartContainer";
 // redux stuff
 import { createStore } from "redux";
 import reducer from "./components/reducer";
-// react-redux - Provider - wraps app , connect - used in components
+// react-redux - Provider 
 import { Provider } from "react-redux";
 
 // initial store
@@ -29,6 +29,8 @@ const store = createStore(
 );
 
 function App() {
+
+  
   return (
     <Provider store={store}>
       <Router basename={process.env.PUBLIC_URL}>
@@ -54,7 +56,7 @@ function App() {
           <Route
             path="/product"
             exact
-            component={() => <Product data={Data} />}
+            component={() => <Product  />}
           />
           <Route
             path={() => "/main" || "/admin" || "/any-other-word"}

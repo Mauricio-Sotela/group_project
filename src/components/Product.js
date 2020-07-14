@@ -1,42 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { ADD } from "../components/actions";
-const Product = (props) => {
-  const items = props.data.map((item) => {
+import { addItem } from "./actions";
+const Product = (state) => {
+  console.log(state);
+
+  const items = state.state.cart.map((item) => {
     const { id, productName, delivery, url, price, tags } = item;
 
-    const add = (state) => {
-      console.log("ggg");
-
-      return {
-        ...state,
-        cart: [...items],
-        items,
-      };
-    };
     return (
-      <Link key={id} to={`/product/${id}`}>
-        {/*  */}
+      <React.Fragment>
+        <Link key={id} to={`/product/${id}`}>
+          {/*  */}
 
-        <li className="quote" key={id}>
-          <h1>{productName}</h1>
+          <li className="quote" key={id}>
+            <h1>{productName}</h1>
 
-          {/* ---- img -----*/}
+            {/* ---- img -----*/}
 
-          <img className="img-box" src={url} alt={tags} />
+            <img className="img-box" src={url} alt={tags} />
 
-          {/* ---- img -----*/}
-          <p>{tags}</p>
-          <h5>&euro; {price}</h5>
+            {/* ---- img -----*/}
+            <p>{tags}</p>
+            <h5>&euro; {price}</h5>
 
-          {/* ---- Btn ----- */}
-          <button className="btn-addToCart" onClick={add}>
-            More Info
-          </button>
-        </li>
-      </Link>
-
+            {/* ---- Btn ----- */}
+          </li>
+        </Link>
+        <button className="btn-addToCart" onClick={state.add}>
+          More Info
+        </button>
+      </React.Fragment>
       //
       // ------------------
     );
@@ -93,9 +87,15 @@ const Product = (props) => {
   );
 };
 
+const mapDispatchToProps = (dispatch, ownProps) => {
+  
+  const { id } = ownProps;
+  console.log(ownProps);
+  return {
+    add: () => dispatch(addItem(id)),
+  };
+};
 const mapStateToProps = (state) => {
-  console.log(state);
-
   return { state };
 };
-export default connect(mapStateToProps)(Product);
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
