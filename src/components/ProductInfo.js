@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-
-const ProductInfo = (state) => {
-  console.log(state);
-  const selectedItem = state.state.cart.filter((item) => item.id == state.id);
-  const moreInfo = selectedItem.map((item) => {
+import { addItem } from "./actions";
+const ProductInfo = ({ addItem, store }) => {
+  console.log(store);
+   const selectedItem = store.cart.map((item) => item.id == store.id);
+  const moreInfo = store.cart.map((item) => {
     //
     //
     //
@@ -23,7 +23,7 @@ const ProductInfo = (state) => {
     //
     //
     //
-  
+console.log(item);
 
     return (
       <div key={id} className="box-quote">
@@ -41,6 +41,11 @@ const ProductInfo = (state) => {
           <p>{descriptionLong}</p>
           <span>{delivery}</span>
           <a href={link}>More info</a>
+          <button
+            onClick={()=>{addItem(item)}}
+          >
+            add
+          </button>
         </div>
       </div>
       //
@@ -84,8 +89,10 @@ const ProductInfo = (state) => {
     </React.Fragment>
   );
 };
-
-const mapStateToProps = (state) => {
-  return { state };
+const mapActionsToProps = {
+  addItem,
 };
-export default connect(mapStateToProps)(ProductInfo);
+const mapStateToProps = (store) => {
+  return { store };
+};
+export default connect(mapStateToProps, mapActionsToProps)(ProductInfo);
