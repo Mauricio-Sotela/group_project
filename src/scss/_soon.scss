@@ -19,11 +19,9 @@
     top: 0;
     left: 0;
     background-color: rgba(2, 2, 2, 0.1);
-    // overlay help
-    // https://bryanlrobinson.com/blog/how-to-css-after-elements-for-background-overlays/
+    // overlay help: https://bryanlrobinson.com/blog/how-to-css-after-elements-for-background-overlays/
   }
-  //
-  //
+
   .home-banner-container {
     display: flex;
     justify-content: center;
@@ -44,7 +42,7 @@
       -webkit-text-stroke-width: 1px;
     }
   }
-  //   --------
+
   .footer-home {
     width: 100%;
     height: 20%;
@@ -79,7 +77,6 @@
       }
     }
 
-    //
     li {
       text-transform: lowercase;
       font-size: 0.9em;

@@ -78,10 +78,8 @@ function reducer(state = initialStore, action) {
       (cartTotal, dataItem) => {
         const { price, inventory } = dataItem;
         const itemTotal = price * inventory;
-
         cartTotal.total += itemTotal;
         cartTotal.inventory += inventory;
-
         return cartTotal;
       },
       {
