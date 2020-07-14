@@ -1,18 +1,12 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 const Soon = () => {
   return (
     <React.Fragment>
-      {/* <div className="soon-banner">
-        <h1>home</h1>
-      </div> */}
-
       <div className="soon-banner">
         <div className="home-banner-container">
           <h1>SOON</h1>
         </div>
-        {/* ----------- */}
 
         <div className="footer-home">
           <p> &#169; 2020</p>

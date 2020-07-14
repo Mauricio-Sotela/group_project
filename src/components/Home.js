@@ -1,12 +1,6 @@
-// import React, { Component } from "react";
-// import SimpleImageSlider from "react-simple-image-slider";
-
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import SimpleImageSlider from "react-simple-image-slider";
-//
-// import Menu from "./components/Menu";
-//
+// import { Link } from "react-router-dom";
+// import SimpleImageSlider from "react-simple-image-slider";
 
 class Home extends Component {
   render() {
@@ -23,7 +17,6 @@ class Home extends Component {
               <button>More Details</button>
             </div>
           </div>
-          {/* ----------- */}
 
           <div className="footer-home">
             <p> &#169; 2020</p>
