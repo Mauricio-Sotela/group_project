@@ -7,7 +7,14 @@ const Product = (state) => {
   console.log(state);
 
   const items = state.state.cart.map((item) => {
-    const { id, productName, delivery, url, price, tags } = item;
+    const {
+      id,
+      productName,
+      // delivery,
+      url,
+      price,
+      tags,
+    } = item;
 
     return (
       <React.Fragment>

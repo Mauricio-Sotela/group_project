@@ -4,9 +4,11 @@ import { addItem } from "../redux/actions";
 
 const ProductInfo = ({ addItem, store }) => {
   console.log(store);
+  console.log(store.id); // undefined
   console.log(store.cart[2].id); // access item.id inside store (need bracket to select index)
 
-  // const selectedItem = store.cart.map((item) => item.id == store.id);
+  // need to change "store.id" & replace it line 13
+  const selectedItem = store.cart.filter((item) => item.id == store.id);
 
   const moreInfo = store.cart.map((item) => {
     console.log(item);
@@ -16,8 +18,7 @@ const ProductInfo = ({ addItem, store }) => {
       productName,
       url2,
       price,
-      inventory,
-      tags,
+      // tags,
       label,
       link,
       descriptionLong,
@@ -32,13 +33,15 @@ const ProductInfo = ({ addItem, store }) => {
 
         <div className="productInfo-boxDescription">
           <h3 className="headline-productName">{productName}</h3>
-          <h4>{inventory}</h4>
           <h5>&euro; {price}</h5>
           <h6>{label}</h6>
           <p>{descriptionLong}</p>
           <span>{delivery}</span>
-          <a href={link}>More info</a>
+          <a className="button-product" href={link}>
+            More info
+          </a>
           <button
+            className="button-product"
             onClick={() => {
               addItem(item);
             }}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import SimpleImageSlider from "react-simple-image-slider";
 
 class Home extends Component {
@@ -14,7 +14,9 @@ class Home extends Component {
                 LUXUS Market is back and better than before! Our Trends 2020
                 features more new and innovation products
               </h1>
-              <button>More Details</button>
+              <Link to="/soon">
+                <button>More Details</button>
+              </Link>
             </div>
           </div>
 

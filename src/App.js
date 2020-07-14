@@ -38,10 +38,7 @@ function App() {
           />
           <Route path="/product" exact component={() => <Product />} />
 
-          <Route
-            path={() => "/main" || "/admin" || "/any-other-word"}
-            component={Soon}
-          />
+          <Route path="/soon" exact component={Soon} />
         </Switch>
       </Router>
     </Provider>
