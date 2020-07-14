@@ -1,13 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addItem } from "./actions";
+import { addItem } from "../redux/actions";
+
 const ProductInfo = ({ addItem, store }) => {
   console.log(store);
-   const selectedItem = store.cart.map((item) => item.id == store.id);
+  console.log(store.cart[2].id); // access item.id inside store (need bracket to select index)
+
+  // const selectedItem = store.cart.map((item) => item.id == store.id);
+
   const moreInfo = store.cart.map((item) => {
-    //
-    //
-    //
+    console.log(item);
+
     const {
       id,
       productName,
@@ -20,19 +23,13 @@ const ProductInfo = ({ addItem, store }) => {
       descriptionLong,
       delivery,
     } = item;
-    //
-    //
-    //
-console.log(item);
 
     return (
       <div key={id} className="box-quote">
-        {/* box 1 */}
-
         <div className="productInfo-boxImg">
           <img className="img-box" src={url2} alt={label} />
         </div>
-        {/* box 2 */}
+
         <div className="productInfo-boxDescription">
           <h3 className="headline-productName">{productName}</h3>
           <h4>{inventory}</h4>
@@ -42,13 +39,14 @@ console.log(item);
           <span>{delivery}</span>
           <a href={link}>More info</a>
           <button
-            onClick={()=>{addItem(item)}}
+            onClick={() => {
+              addItem(item);
+            }}
           >
-            add
+            Add to cart
           </button>
         </div>
       </div>
-      //
     );
   });
 
@@ -89,10 +87,13 @@ console.log(item);
     </React.Fragment>
   );
 };
+
 const mapActionsToProps = {
   addItem,
 };
+
 const mapStateToProps = (store) => {
   return { store };
 };
+
 export default connect(mapStateToProps, mapActionsToProps)(ProductInfo);

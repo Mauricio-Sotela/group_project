@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { addItem } from "./actions";
+import { addItem } from "../redux/actions";
+
 const Product = (state) => {
   console.log(state);
 
@@ -11,28 +12,20 @@ const Product = (state) => {
     return (
       <React.Fragment>
         <Link key={id} to={`/product/${id}`}>
-          {/*  */}
-
           <li className="quote" key={id}>
             <h1>{productName}</h1>
-
-            {/* ---- img -----*/}
-
             <img className="img-box" src={url} alt={tags} />
-
-            {/* ---- img -----*/}
             <p>{tags}</p>
             <h5>&euro; {price}</h5>
-
-            {/* ---- Btn ----- */}
-          </li><button className="btn-addToCart" onClick={(id)=> state.addItem(id)}>
-          More Info
-        </button>
+            <button
+              className="btn-addToCart"
+              onClick={(id) => state.addItem(id)}
+            >
+              More Info
+            </button>
+          </li>
         </Link>
-        
       </React.Fragment>
-      //
-      // ------------------
     );
   });
 
@@ -51,7 +44,9 @@ const Product = (state) => {
               and get helpful tips and style advice to transform your space.
               Come on in.
             </p>
-            <button>More Details</button>
+            <Link to="/soon">
+              <button>More Details</button>
+            </Link>
           </div>
         </div>
         <h1>AW/20 </h1>
@@ -87,10 +82,10 @@ const Product = (state) => {
   );
 };
 
-
 const mapStateToProps = (state) => {
   return { state };
 };
+
 const mapActionsToProps = {
   addItem,
 };

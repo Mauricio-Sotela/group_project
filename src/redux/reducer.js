@@ -4,9 +4,10 @@ import {
   CLEAR_CART,
   REMOVE,
   GET_TOTALS,
-  TOGGLE_AMOUNT,
+  // TOGGLE_AMOUNT,
   ADD,
 } from "./actions";
+
 import Data from "../data.json";
 
 const initialStore = {
@@ -15,25 +16,31 @@ const initialStore = {
   amount: 0,
   selectedItem: [],
 };
+
 function reducer(state = initialStore, action) {
+  // ===== ADD ===
   if (action.type === ADD) {
     console.log(action);
-   let item= state.cart.filter((item) => {
+    let item = state.cart.filter((item) => {
       if (item.id === action.item.id) {
-        return item
+        return item;
       }
-    })
+    });
     return {
       ...state,
-      selectedItem:[...state.selectedItem.concat(item)]
+      selectedItem: [...state.selectedItem.concat(item)],
     };
   }
+
+  // ===== CLEAR CART ===
   if (action.type === CLEAR_CART) {
     return {
       ...state,
       selectedItem: [],
     };
   }
+
+  // ===== DECREASE ===
   if (action.type === DECREASE) {
     let tempCart = state.selectedItem.map((dataItem) => {
       if (dataItem.id === action.payload.id) {
@@ -41,9 +48,10 @@ function reducer(state = initialStore, action) {
       }
       return dataItem;
     });
-
     return { ...state, selectedItem: tempCart };
   }
+
+  // ===== INCREASE ===
   if (action.type === INCREASE) {
     let tempCart = state.selectedItem.map((dataItem) => {
       if (dataItem.id === action.payload.id) {
@@ -53,6 +61,8 @@ function reducer(state = initialStore, action) {
     });
     return { ...state, selectedItem: tempCart };
   }
+
+  // ===== REMOVE ===
   if (action.type === REMOVE) {
     return {
       ...state,
@@ -61,6 +71,8 @@ function reducer(state = initialStore, action) {
       ),
     };
   }
+
+  // ===== TOTAL ===
   if (action.type === GET_TOTALS) {
     let { total, inventory } = state.selectedItem.reduce(
       (cartTotal, dataItem) => {
