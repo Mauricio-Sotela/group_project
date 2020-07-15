@@ -1,7 +1,9 @@
 import React from "react";
+
+import Footer from "./Footer";
+
 import { connect } from "react-redux";
 import { addItem } from "../redux/actions";
-import Footer from "./Footer";
 
 const ProductInfo = ({ addItem, store }) => {
   console.log(store);

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 import Footer from "./Footer";
+
 // import SimpleImageSlider from "react-simple-image-slider";
 
 class Home extends Component {
