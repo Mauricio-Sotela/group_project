@@ -80,3 +80,14 @@
     }
   }
 }
+.fa-shopping-bag{
+  position: relative;
+  font-size: 1.8rem;
+  .quantity{
+    position: absolute;
+    right: 30%;
+    transform: translateY(70%);
+    font-size: 1rem;
+    color: white;
+  }
+}
