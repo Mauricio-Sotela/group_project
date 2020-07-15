@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   z-index: 1;
-  
+
   .style-link-nav {
     text-decoration: none;
     text-transform: uppercase;
@@ -17,7 +17,8 @@
     background-color: transparent;
   }
 
-  // ---------------input
+  // ===== Input ===
+
   .text {
     color: white;
     text-transform: uppercase;
@@ -25,11 +26,13 @@
 
     .form-searchfield {
       background-color: transparent;
+
       input {
         background-color: transparent;
         color: rgba(14, 14, 14, 0.8);
         border: 0;
       }
+
       .input-text {
         background-color: transparent;
         padding: 4px 20px;
@@ -43,22 +46,25 @@
           color: rgba(14, 14, 14, 0.8);
         }
       }
+
       .submit {
         background-color: transparent;
       }
     }
   }
-  //   input search
+
+  // ===== Input search ===
+
   .input-search {
     margin: 0 10px;
     color: rgba(163, 163, 163, 0.3);
   }
-  //   --------------
 
   h3 {
     color: rgba(14, 14, 14, 0.8);
     letter-spacing: 10px;
   }
+
   nav {
     li {
       color: rgba(14, 14, 14, 0.8);
@@ -73,5 +79,4 @@
       font-size: 20px;
     }
   }
-  //
 }
