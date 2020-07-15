@@ -4,7 +4,6 @@ import {
   CLEAR_CART,
   REMOVE,
   GET_TOTALS,
-  // TOGGLE_AMOUNT,
   ADD,
 } from "./actions";
 
@@ -21,7 +20,7 @@ function reducer(state = initialStore, action) {
   // ===== ADD ===
   if (action.type === ADD) {
     let addedItem = state.cart.find((item) => item.id === action.item.id);
-    //check if the action id exists in the selectedItem
+    // check if the action id exists in the selectedItem
     let existed_item = state.selectedItem.find(
       (item) => action.item.id === item.id
     );
@@ -37,7 +36,6 @@ function reducer(state = initialStore, action) {
         selectedItem: [...state.selectedItem, addedItem],
       };
     }
-    
   }
 
   // ===== CLEAR CART ===
