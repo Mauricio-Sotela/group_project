@@ -27,9 +27,23 @@ export default class PauseOnHover extends Component {
             <h3>4</h3>
           </div>
         <Slider {...settings}>
-          <div>
-          <img className='ban' src='https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80' width='30%'/>
+       
+          
+
+          <div className="box2-banner">
+            <h1>Up to</h1>
+            <h2>40% off</h2>
+
+            <p>
+              Discover MADE Ideas. Where you can explore inspiring interiors,
+              and get helpful tips and style advice to transform your space.
+              Come on in.
+            </p>
+            
+              <button>More Details</button>
+            
           </div>
+       
           <div>
           <img className='ban' src='https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80' width='30%'/>
           </div>
