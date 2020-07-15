@@ -25,11 +25,10 @@ const Product = (state) => {
             <h5>&euro; {price}</h5>
 
             {/* ---- Btn ----- */}
-          </li><button className="btn-addToCart" onClick={(id)=> state.addItem(id)}>
-          More Info
-        </button>
+          </li>
+
+          <button className="btn-addToCart">More Info</button>
         </Link>
-        
       </React.Fragment>
       //
       // ------------------
@@ -87,12 +86,14 @@ const Product = (state) => {
   );
 };
 
-
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const { id } = ownProps;
+  console.log(ownProps);
+  return {
+    add: () => dispatch(addItem(id)),
+  };
+};
 const mapStateToProps = (state) => {
   return { state };
 };
-const mapActionsToProps = {
-  addItem,
-};
-
-export default connect(mapStateToProps, mapActionsToProps)(Product);
+export default connect(mapStateToProps, mapDispatchToProps)(Product);

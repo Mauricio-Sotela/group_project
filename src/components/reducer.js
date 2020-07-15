@@ -17,7 +17,7 @@ const initialStore = {
 };
 function reducer(state = initialStore, action) {
   if (action.type === ADD) {
-    console.log(action);
+ 
    let item= state.cart.filter((item) => {
       if (item.id === action.item.id) {
         return item
