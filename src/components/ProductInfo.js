@@ -2,6 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { addItem } from "../redux/actions";
 const ProductInfo = (state) => {
+  const year=()=> {
+    var d = new Date();
+    var n = d.getFullYear();
+    return n;
+  }
   const selectedItem = state.store.cart.filter((item) => item.id == state.id);
   const moreInfo = selectedItem.map((item) => {
     //
@@ -54,8 +59,8 @@ const ProductInfo = (state) => {
   return (
     <React.Fragment>
       {/* <div className="product-info-banner"></div> */}
-      <h1 className='product-aw'>AW/20 </h1>
-      <p className='product-collection'>All, Collection</p>
+      <h1 className="product-aw">AW/20 </h1>
+      <p className="product-collection">All, Collection</p>
       <div className="product-info">{moreInfo}</div>
       <div className="footer-product-info">
         <p> &#169; 2020</p>
@@ -64,21 +69,23 @@ const ProductInfo = (state) => {
           <p>facebook</p>
         </div>
         <ol>
-          <ul>
-            <li>ONLINE CATALOGUE 2019</li>
-            <li>TERMS &amp; CONDITIONS </li>
-            <li>PRIVACY POLICY</li>
-          </ul>
-          <ul>
-            <li>OUR STORY</li>
-            <li>CAREERS</li>
-            <li>SALES</li>
-          </ul>
-          <ul>
-            <li>CLAIMS</li>
-            <li>FAQ</li>
-            <li>CONTACT US</li>
-          </ul>
+         <div className='footer-ol'>
+            <ul>
+              <li><a href='/group_project/product'>ONLINE CATALOGUE {year()}</a></li>
+              <li>TERMS &amp; CONDITIONS </li>
+              <li>PRIVACY POLICY</li>
+            </ul>
+            <ul>
+              <li>OUR STORY</li>
+              <li>CAREERS</li>
+              <li>SALES</li>
+            </ul>
+            <ul>
+              <li>CLAIMS</li>
+              <li>FAQ</li>
+              <li>CONTACT US</li>
+            </ul>
+         </div>
         </ol>
       </div>
     </React.Fragment>
