@@ -24,8 +24,12 @@ const MenuTwo = (state) => {
 
         <Link className="style-link-nav" to="/cart">
           <li>
-            <i className="fas fa-shopping-bag"><strong className='quantity'>{state.state.selectedItem.length}</strong></i> Cart
-            
+            <i className="fas fa-shopping-bag">
+              <strong className="quantity">
+                {state.state.selectedItem.length}
+              </strong>
+            </i>{" "}
+            Cart
           </li>
         </Link>
       </nav>
