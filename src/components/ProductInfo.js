@@ -35,7 +35,7 @@ const ProductInfo = (state) => {
           <h6>{label}</h6>
           <p>{descriptionLong}</p>
           <span>{delivery}</span>
-          <a className="button-product" href={link}>
+          <a className="button-product" href={link} target="blank">
             More Info
           </a>
           <button
