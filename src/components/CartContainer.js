@@ -1,5 +1,7 @@
 import React from "react";
+
 import Cart from "./Cart";
+
 import { connect } from "react-redux";
 import { CLEAR_CART, GET_TOTALS } from "../redux/actions";
 
