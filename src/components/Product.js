@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Slider from './Slider'
 import Footer from "./Footer";
 
 import { connect } from "react-redux";
@@ -34,10 +34,10 @@ const Product = (state) => {
 
   return (
     <React.Fragment>
-      <div className="wrapper-product">
+      <div className="wrapper-product"> <Slider />
         <div className="product-banner">
           <div className="box1-banner"></div>
-
+       
           <div className="box2-banner">
             <h1>Up to</h1>
             <h2>40% off</h2>

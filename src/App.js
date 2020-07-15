@@ -23,7 +23,7 @@ function App() {
     <Provider store={store}>
       <Router basename={process.env.PUBLIC_URL}>
         <MenuTwo />
-
+         
         <Switch>
           <Route path="/" exact component={Home} />
 
@@ -38,6 +38,7 @@ function App() {
           <Route path="/soon" exact component={Soon} />
         </Switch>
       </Router>
+      
     </Provider>
   );
 }
