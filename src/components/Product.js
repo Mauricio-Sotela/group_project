@@ -7,8 +7,6 @@ import { connect } from "react-redux";
 import { addItem } from "../redux/actions";
 
 const Product = (state) => {
-  console.log(state);
-
   const items = state.state.cart.map((item) => {
     const {
       id,

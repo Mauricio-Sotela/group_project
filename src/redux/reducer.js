@@ -20,7 +20,6 @@ const initialStore = {
 function reducer(state = initialStore, action) {
   // ===== ADD ===
   if (action.type === ADD) {
-    console.log(action);
     let addedItem = state.cart.find((item) => item.id === action.item.id);
     //check if the action id exists in the selectedItem
     let existed_item = state.selectedItem.find(

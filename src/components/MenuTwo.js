@@ -24,8 +24,8 @@ const MenuTwo = (state) => {
 
         <Link className="style-link-nav" to="/cart">
           <li>
-            <ion-icon name="basket-outline"></ion-icon> Cart{" "}
-            <strong>{state.state.selectedItem.length}</strong>
+            <i className="fas fa-shopping-bag"><strong className='quantity'>{state.state.selectedItem.length}</strong></i> Cart
+            
           </li>
         </Link>
       </nav>
