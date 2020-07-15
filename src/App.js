@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // import Data from "./data.json";
+
 import MenuTwo from "./components/MenuTwo";
 import Home from "./components/Home";
 import Product from "./components/Product";
 import ProductInfo from "./components/ProductInfo";
-// import Cart from "./components/Cart";
 import Soon from "./components/Soon";
 import CartContainer from "./components/CartContainer";
 
@@ -15,7 +15,6 @@ import reducer from "./redux/reducer";
 
 import { Provider } from "react-redux";
 
-// store
 const store = createStore(
   reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
