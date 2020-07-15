@@ -1,10 +1,11 @@
 @import "Menu-two";
 @import "cart";
-@import "product.scss";
+@import "product";
 @import "product-info";
 @import "fonts";
 @import "home";
 @import "soon";
+@import "footer";
 
 *,
 *::before,
@@ -20,9 +21,11 @@
 body::-webkit-scrollbar {
   width: 1em;
 }
+
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgb(167, 167, 167);
 }
+
 body::-webkit-scrollbar-thumb {
   background-color: black;
   outline: none;
@@ -32,4 +35,11 @@ body {
   height: 100%;
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
 }

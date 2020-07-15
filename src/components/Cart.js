@@ -1,16 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import {
   INCREASE,
   DECREASE,
-  REMOVE,
   TOGGLE_AMOUNT,
   removeItem,
-} from "./actions.js";
+} from "../redux/actions.js";
+
 const Cart = (states) => {
   return (
     <div className="cart-item">
       <img src={states.url} alt={states.productName} />
+
       <div>
         <h4>{states.productName}</h4>
         <h4 className="item-price">€{states.price}</h4>
@@ -19,10 +21,11 @@ const Cart = (states) => {
           remove
         </button>
       </div>
+
       <div>
         {/* increase amount */}
         <button className="amount-btn" onClick={() => states.increase()}>
-        <i class="fas fa-chevron-up"></i>
+          <i class="fas fa-chevron-up"></i>
         </button>
         {/* amount */}
         <p className="amount">{states.inventory}</p>
@@ -46,6 +49,7 @@ const Cart = (states) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   const { id, amount } = ownProps;
+
   return {
     remove: () => dispatch(removeItem(id)),
     increase: () => dispatch({ type: INCREASE, payload: { id } }),
@@ -54,8 +58,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch({ type: TOGGLE_AMOUNT, payload: { id, toggle } }),
   };
 };
+
 const mapStateToProps = (states) => {
-  const { selectedItem } = states;
   return { states };
 };
 

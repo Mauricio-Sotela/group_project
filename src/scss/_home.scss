@@ -1,7 +1,6 @@
 .home-banner {
   width: 100vw;
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   background-image: url(../img-decor/ignant-design-ligne-roset-daybed-001--720x325.jpg);
@@ -11,25 +10,22 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @media (max-width: 1350px) {
+    background-position: center;
+    background-size: 200%;
+  }
+
   &:hover {
     background-position: left bottom;
     background-size: 110%;
     background-image: url(../img-decor/OS---OOS_private-residence-3.jpg);
+
+    @media (max-width: 1350px) {
+      background-position: center;
+      background-size: 200%;
+    }
   }
 
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(2, 2, 2, 0.1);
-    // overlay help
-    // https://bryanlrobinson.com/blog/how-to-css-after-elements-for-background-overlays/
-  }
-  //
-  //
   .home-banner-container {
     display: flex;
     justify-content: space-evenly;
@@ -48,6 +44,7 @@
         color: rgba(255, 255, 255, 0.5);
       }
     }
+
     .box2-banner {
       background-color: transparent;
       width: 49.5%;
@@ -57,7 +54,6 @@
       align-items: flex-start;
       flex-direction: column;
 
-      //   z-index: 3;   this is the problem to allow clicking in the nav bar
       h1 {
         color: rgba(14, 14, 14, 0.8);
         z-index: 3;
@@ -69,65 +65,22 @@
         line-height: 42px;
         letter-spacing: 1px;
       }
+
       button {
         z-index: 4;
         background-color: transparent;
         border: 1px solid rgba(14, 14, 14, 0.8);
         padding: 12px 23px;
         margin: 0 60px 0 35px;
+        cursor: pointer;
         color: #000;
         transition: 0.3s ease-in-out;
+
         &:hover {
-          background-color: #000;
-          border: 0px solid #000;
           color: #fff;
-          padding: 12px 23px;
+          background-color: #000;
         }
       }
-    }
-  }
-  //   --------
-  .footer-home {
-    z-index: 2;
-    width: 100%;
-    height: 20%;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-
-    p {
-      color: rgba(14, 14, 14, 0.8);
-      font-family: "Arimo";
-      font-size: 0.9em;
-    }
-
-    .insta {
-      display: flex;
-
-      .dot {
-        margin: 0 10px 0 0;
-        width: 15px;
-        height: 15px;
-        background-color: rgba(14, 14, 14, 0.8);
-        border-radius: 100%;
-      }
-
-      p {
-        color: rgba(14, 14, 14, 0.8);
-        display: inline-block;
-        font-family: "Arimo";
-        font-size: 0.9em;
-      }
-    }
-
-    //
-    li {
-      text-transform: lowercase;
-      font-size: 0.9em;
-      color: rgba(14, 14, 14, 0.8);
-      font-family: "Arimo";
     }
   }
 }

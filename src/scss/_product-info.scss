@@ -2,7 +2,6 @@
   width: 100vw;
   height: 90vh;
   background-color: rgba(224, 175, 129, 0.5);
-
   display: flex;
   background-attachment: fixed;
   flex-direction: column;
@@ -12,7 +11,6 @@
   background-image: url(../img-decor/yellownosestudio.jpg);
 }
 
-//
 h1 {
   text-align: center;
   padding: 100px 0 0px 0;
@@ -20,6 +18,7 @@ h1 {
   font-size: 3.8em;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 p {
   text-align: center;
   padding: 0px 0 50px 0;
@@ -31,7 +30,7 @@ p {
 
 .product-info {
   width: 100vw;
-  height: 90vh;
+  height: fit-content;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
@@ -44,7 +43,7 @@ p {
     border-bottom: 1px solid #000;
     border-top: 1px solid #000;
     width: 80vw;
-    height: 70vh;
+    height: 50vh;
     padding: 20px 20px;
     display: flex;
     justify-content: space-evenly;
@@ -59,6 +58,12 @@ p {
       justify-content: center;
       align-items: center;
       background-color: rgb(255, 255, 255);
+
+      img {
+        height: 90%;
+        border-radius: 3px;
+        box-shadow: -1px 2px 7px rgba(0, 0, 0, 0.2);
+      }
     }
 
     .productInfo-boxDescription {
@@ -70,6 +75,7 @@ p {
       align-items: flex-start;
       padding: 0 0 0 20px;
       background-color: rgb(255, 255, 255);
+
       h3 {
         font-size: 1.4em;
         font-family: "Fjord One", serif;
@@ -80,12 +86,14 @@ p {
       h4 {
         margin: 6px;
       }
+
       h5 {
         font-size: 1.5em;
         margin: 5px;
         color: rgb(136, 136, 136);
         font-family: monospace;
       }
+
       h6 {
         font-size: 1.3em;
         margin: 5px;
@@ -100,12 +108,14 @@ p {
         font-size: 0.8em;
         margin: 4px;
       }
+
       p {
         font-family: Arial, Helvetica, sans-serif;
         color: #000;
         font-size: 0.9em;
         margin: 4px;
       }
+
       span {
         margin: 10px 0;
         font-family: "Poppins-light";
@@ -114,15 +124,35 @@ p {
         border-bottom: 1px solid #8a8a8a;
         padding-bottom: 1px;
       }
+
+      .button-product {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin: 1rem 0;
+        padding: 0.7rem 0.8rem;
+        width: 8rem;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 1px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        background-color: white;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
     }
   }
 }
 
-//   --------
 .footer-product-info {
   width: 100%;
   height: 20%;
-  margin: 150px 0 100px 0;
+  padding: 50px;
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-evenly;
@@ -156,11 +186,22 @@ p {
     }
   }
 
-  //
   li {
     text-transform: lowercase;
     font-size: 0.9em;
     color: rgba(14, 14, 14, 0.8);
     font-family: "Arimo";
+  }
+}
+
+.footer-ol {
+  display: flex;
+  ul {
+    margin-left: 1rem;
+    text-decoration: underline;
+
+    li {
+      margin: 0.5rem;
+    }
   }
 }

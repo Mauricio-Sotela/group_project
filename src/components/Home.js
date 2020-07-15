@@ -1,12 +1,7 @@
-// import React, { Component } from "react";
-// import SimpleImageSlider from "react-simple-image-slider";
-
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import SimpleImageSlider from "react-simple-image-slider";
-//
-// import Menu from "./components/Menu";
-//
+
+import Footer from "./Footer";
 
 class Home extends Component {
   render() {
@@ -20,35 +15,12 @@ class Home extends Component {
                 LUXUS Market is back and better than before! Our Trends 2020
                 features more new and innovation products
               </h1>
-              <button>More Details</button>
+              <Link to="/soon">
+                <button>More Details</button>
+              </Link>
             </div>
           </div>
-          {/* ----------- */}
-
-          <div className="footer-home">
-            <p> &#169; 2020</p>
-
-            <div className="insta">
-              <div className="dot"></div>
-              <p>facebook</p>
-            </div>
-
-            <ul>
-              <li>ONLINE CATALOGUE 2019</li>
-              <li>TERMS &amp; CONDITIONS </li>
-              <li>PRIVACY POLICY</li>
-            </ul>
-            <ul>
-              <li>OUR STORY</li>
-              <li>CAREERS</li>
-              <li>SALES</li>
-            </ul>
-            <ul>
-              <li>CLAIMS</li>
-              <li>FAQ</li>
-              <li>CONTACT US</li>
-            </ul>
-          </div>
+          <Footer />
         </div>
       </React.Fragment>
     );
@@ -56,21 +28,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-// class Home extends React.Component {
-//   render() {
-//     const images = [
-//       { url: "images/Arc_table.jpg" },
-//       { url: "images/WANDSEKRETÄR.jpg" },
-//       { url: "images/fordite.jpg" },
-//     ];
-
-//     return (
-//       <div className="slider-containerr">
-//         <SimpleImageSlider width={896} height={504} images={images} />
-//       </div>
-//     );
-//   }
-// }
-
-// export default Home;
