@@ -28,7 +28,7 @@ function App() {
         <MenuTwo />
 
         <Switch>
-          <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+          <Route path="/" exact component={Home} />
 
           <Route path="/cart" exact component={CartContainer} />
 
