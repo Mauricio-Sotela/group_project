@@ -20,22 +20,17 @@ const Product = (state) => {
     } = item;
 
     return (
-      <React.Fragment>
-        <Link key={id} to={`/product/${id}`}>
-          <li className="quote" key={id}>
-            <h1>{productName}</h1>
-            <img className="img-box" src={url} alt={tags} />
-            <p>{tags}</p>
-            <h5>&euro; {price}</h5>
-            <button
-              className="btn-addToCart"
-              onClick={(id) => state.addItem(id)}
-            >
-              More Info
-            </button>
-          </li>
-        </Link>
-      </React.Fragment>
+      <Link key={id} to={`/product/${id}`}>
+        <li className="quote" key={id}>
+          <h1>{productName}</h1>
+          <img className="img-box" src={url} alt={tags} />
+          <p>{tags}</p>
+          <h5>&euro; {price}</h5>
+          <button className="btn-addToCart" >
+            More Info
+          </button>
+        </li>
+      </Link>
     );
   });
 
