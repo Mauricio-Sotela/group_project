@@ -21,15 +21,24 @@ function reducer(state = initialStore, action) {
   // ===== ADD ===
   if (action.type === ADD) {
     console.log(action);
-    let item = state.cart.filter((item) => {
-      if (item.id === action.item.id) {
-        return item;
-      }
-    });
-    return {
-      ...state,
-      selectedItem: [...state.selectedItem.concat(item)],
-    };
+    let addedItem = state.cart.find((item) => item.id === action.item.id);
+    //check if the action id exists in the selectedItem
+    let existed_item = state.selectedItem.find(
+      (item) => action.item.id === item.id
+    );
+    if (existed_item) {
+      addedItem.inventory += 1;
+      return {
+        ...state,
+      };
+    } else {
+      addedItem.inventory = 1;
+      return {
+        ...state,
+        selectedItem: [...state.selectedItem, addedItem],
+      };
+    }
+    
   }
 
   // ===== CLEAR CART ===
