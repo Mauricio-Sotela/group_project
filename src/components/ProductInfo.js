@@ -1,4 +1,7 @@
 import React from "react";
+
+import Footer from "./Footer";
+
 import { connect } from "react-redux";
 import { addItem } from "../redux/actions";
 
@@ -56,37 +59,10 @@ const ProductInfo = ({ addItem, store }) => {
   return (
     <React.Fragment>
       <div className="product-info-banner"></div>
-
       <h1>AW/20 </h1>
       <p>All, Collection</p>
-
       <div className="product-info">{moreInfo}</div>
-
-      <div className="footer-product-info">
-        <p> &#169; 2020</p>
-
-        <div className="insta">
-          <div className="dot"></div>
-          <p>facebook</p>
-        </div>
-        <ol>
-          <ul>
-            <li>ONLINE CATALOGUE 2019</li>
-            <li>TERMS &amp; CONDITIONS </li>
-            <li>PRIVACY POLICY</li>
-          </ul>
-          <ul>
-            <li>OUR STORY</li>
-            <li>CAREERS</li>
-            <li>SALES</li>
-          </ul>
-          <ul>
-            <li>CLAIMS</li>
-            <li>FAQ</li>
-            <li>CONTACT US</li>
-          </ul>
-        </ol>
-      </div>
+      <Footer />
     </React.Fragment>
   );
 };
