@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f21ff516b2c0126e8e8bb6023407977b",
+    "revision": "981880321d2764a7ae70ac9062aa08ec",
     "url": "/group_project/index.html"
   },
   {
-    "revision": "a3d655b919a5de63ee25",
-    "url": "/group_project/static/css/main.0344ea63.chunk.css"
+    "revision": "d3b3ecb99a38cc9f30c5",
+    "url": "/group_project/static/css/main.1185fb7b.chunk.css"
   },
   {
-    "revision": "a8af4b0e3c17a38eb7f3",
-    "url": "/group_project/static/js/2.9c4e4683.chunk.js"
+    "revision": "efe97944230c10a7f704",
+    "url": "/group_project/static/js/2.e399e3ee.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/group_project/static/js/2.9c4e4683.chunk.js.LICENSE.txt"
+    "revision": "3453b8997016469371284a28c0e873e2",
+    "url": "/group_project/static/js/2.e399e3ee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a3d655b919a5de63ee25",
-    "url": "/group_project/static/js/main.3a9d8347.chunk.js"
+    "revision": "d3b3ecb99a38cc9f30c5",
+    "url": "/group_project/static/js/main.52ace13d.chunk.js"
   },
   {
     "revision": "3af82a9aba1a63b3fe90",
@@ -116,8 +116,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/group_project/static/media/Roboto-Black.3234b3e8.ttf"
   },
   {
+    "revision": "a9e488e57232128ac1fd68964c4acc34",
+    "url": "/group_project/static/media/ignant-architecture-alberto-caiola-harbook-1-720x480.a9e488e5.jpg"
+  },
+  {
+    "revision": "3f3337301101f0641c59ab8ed975435a",
+    "url": "/group_project/static/media/ignant-architecture-springdesignstudio-12-720x540.3f333730.jpg"
+  },
+  {
     "revision": "49ef2a9dacba747c93c7356d49e0f7dd",
     "url": "/group_project/static/media/ignant-design-ligne-roset-daybed-001--720x325.49ef2a9d.jpg"
+  },
+  {
+    "revision": "f0d3e82c964a8a531979b6d651ce39b4",
+    "url": "/group_project/static/media/ignant-samsung-jonas-bjerre-poulsen-0669-720x480.f0d3e82c.jpg"
   },
   {
     "revision": "06d39f820556f7705f03e7df59fc2464",
