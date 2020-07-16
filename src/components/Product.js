@@ -28,7 +28,7 @@ const Product = (state) => {
       <div className="wrapper-product">
        
         <Slider />
-        <div className="product-banner">
+        {/* <div className="product-banner">
           <div className="box1-banner"></div>
           <div className="box2-banner">
             <h1>Up to</h1>
@@ -42,7 +42,7 @@ const Product = (state) => {
               <button>More Details</button>
             </Link>
           </div>
-        </div>
+        </div> */}
         <h1>AW/20 </h1>
         <p>All, Collection</p>
         <ul className="container-products">{items}</ul>
