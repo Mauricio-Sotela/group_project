@@ -8,14 +8,7 @@ import { addItem } from "../redux/actions";
 
 const Product = (state) => {
   const items = state.state.cart.map((item) => {
-    const {
-      id,
-      productName,
-      // delivery,
-      url,
-      price,
-      tags,
-    } = item;
+    const { id, productName, url, price, tags } = item;
 
     return (
       <Link key={id} to={`/product/${id}`}>
@@ -37,11 +30,9 @@ const Product = (state) => {
         <Slider />
         <div className="product-banner">
           <div className="box1-banner"></div>
-
           <div className="box2-banner">
             <h1>Up to</h1>
             <h2>40% off</h2>
-
             <p>
               Discover MADE Ideas. Where you can explore inspiring interiors,
               and get helpful tips and style advice to transform your space.
@@ -55,8 +46,8 @@ const Product = (state) => {
         <h1>AW/20 </h1>
         <p>All, Collection</p>
         <ul className="container-products">{items}</ul>
-        <Footer />
       </div>
+      <Footer />
     </React.Fragment>
   );
 };

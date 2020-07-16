@@ -23,18 +23,14 @@ function App() {
     <Provider store={store}>
       <Router basename={process.env.PUBLIC_URL}>
         <MenuTwo />
-         
         <Switch>
           <Route path="/" exact component={Home} />
-
           <Route path="/cart" exact component={CartContainer} />
-
           <Route
             path="/product/:id"
             component={({ match }) => <ProductInfo id={match.params.id} />}
           />
           <Route path="/product" exact component={() => <Product />} />
-
           <Route path="/soon" exact component={Soon} />
         </Switch>
       </Router>

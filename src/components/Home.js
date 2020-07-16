@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import Footer from "./Footer";
 
-// import SimpleImageSlider from "react-simple-image-slider";
-
 class Home extends Component {
   render() {
     return (
@@ -30,21 +28,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-// class Home extends React.Component {
-//   render() {
-//     const images = [
-//       { url: "images/Arc_table.jpg" },
-//       { url: "images/WANDSEKRETÄR.jpg" },
-//       { url: "images/fordite.jpg" },
-//     ];
-
-//     return (
-//       <div className="slider-containerr">
-//         <SimpleImageSlider width={896} height={504} images={images} />
-//       </div>
-//     );
-//   }
-// }
-
-// export default Home;
