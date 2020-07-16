@@ -26,7 +26,7 @@ export default class PauseOnHover extends Component {
                 Come on in.
               </p>
 
-              <button className="button">More Details</button>
+              {/* <button className="button">More Details</button> */}
             </div>
           </div>
 
@@ -41,7 +41,7 @@ export default class PauseOnHover extends Component {
                 Come on in.
               </p>
 
-              <button className="button">More Details</button>
+              {/* <button className="button">More Details</button> */}
             </div>
           </div>
           <div className="main-banner3">
@@ -55,7 +55,7 @@ export default class PauseOnHover extends Component {
                 Come on in.
               </p>
 
-              <button className="button">More Details</button>
+              {/* <button className="button">More Details</button> */}
             </div>
           </div>
         </Slider>
