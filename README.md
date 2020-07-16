@@ -1,4 +1,6 @@
 # LUXUS
+
+![](./preview.png)
 ## Structure
 
 ```
