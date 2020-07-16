@@ -1,4 +1,4 @@
-# LUXUS
+# FLUXUS
 
 ![](./preview.png)
 ## Structure
