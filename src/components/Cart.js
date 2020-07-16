@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import {
   INCREASE,
   DECREASE,
-  // REMOVE,
   TOGGLE_AMOUNT,
   removeItem,
 } from "../redux/actions.js";
@@ -61,7 +60,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 const mapStateToProps = (states) => {
-  const { selectedItem } = states;
   return { states };
 };
 

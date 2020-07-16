@@ -73,21 +73,24 @@
       margin-right: 10px;
       margin-left: 10px;
     }
-    ion-icon {
+
+    .ion-icon {
       margin: 0 3px 0 0;
       vertical-align: bottom;
       font-size: 20px;
     }
   }
 }
-.fa-shopping-bag{
+
+.fa-shopping-bag {
   position: relative;
-  font-size: 1.8rem;
-  .quantity{
+  font-size: 1.2rem;
+
+  .quantity {
     position: absolute;
     right: 30%;
-    transform: translateY(70%);
-    font-size: 1rem;
+    transform: translateY(40%);
+    font-size: 0.9rem;
     color: white;
   }
 }

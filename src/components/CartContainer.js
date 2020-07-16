@@ -26,7 +26,7 @@ const CartContainer = ({ cart = [], total, selectedItem = [], dispatch }) => {
 
   return (
     <section className="cart">
-      <h2>your bag</h2>
+      <h2>shopping bag</h2>
 
       <div className="articles">
         {selectedItem.map((item) => {
