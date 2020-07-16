@@ -113,7 +113,7 @@
   height: 70vh;
   justify-content: center;
   align-items: flex-end;
-  z-index: 2;
+  z-index: 100;
 }
 
 .main-banner1 {
@@ -181,4 +181,9 @@
   margin: 0 150px 0 35px;
   color: rgb(0, 0, 0);
   transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
 }
