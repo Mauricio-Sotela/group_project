@@ -12,7 +12,7 @@ class Home extends Component {
             <div className="box1-banner"></div>
             <div className="box2-banner">
               <h1>
-                LUXUS Market is back and better than before! Our Trends 2020
+                FLUXUS Market is back and better than before! Our Trends 2020
                 features more new and innovation products
               </h1>
               <Link to="/soon">
