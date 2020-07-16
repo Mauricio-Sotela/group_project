@@ -34,6 +34,7 @@ function App() {
           <Route path="/soon" exact component={Soon} />
         </Switch>
       </Router>
+      
     </Provider>
   );
 }
